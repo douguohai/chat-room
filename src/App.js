@@ -6,9 +6,9 @@ import axios from "axios";
 import * as React from "react";
 
 
-const wsURL = "ws://127.0.0.1:7880"
+const wsURL = "wss://10.168.1.145:9443"
 
-const BaseUrl = "http://127.0.0.1:8080"
+const BaseUrl = "https://10.168.1.145:7443/api"
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     const [roomId, setRoom] = React.useState("");
 
     useMount(() => {
-        let roomId = "room1";
+        let roomId = "room2";
         let userId = Math.floor(Math.random() * 1000)
 
         // 向给定ID的用户发起请求
